@@ -14,14 +14,85 @@ $(document).ready(function() {
 </head>
 <body>
 <div id="dataDisplay">
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 <span class="red">01 01 01</span> 01 01 01 01 01 01 01 01<br>
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01<br>
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01<br>
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01<br>
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01<br>
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01<br>
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01<br>
-01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01
+<script>
+var row1=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+var row2=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+var row3=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+var row4=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+
+
+var onetotwentysix;
+
+//for(k=0; k<8; k++)
+//{
+//for(i=0; i<26; i++)
+//{
+//	onetotwentysix=Math.floor(Math.random() * 26) + 1;
+//	if(onetotwentysix<10)
+//	{
+//		document.write('0');
+//	}
+//	document.write(onetotwentysix, " ");
+//}
+//document.write('<br>');
+//}
+var timerID=setInterval(function(){
+
+var rowprint='';
+for(k=0; k<row1.length; k++)
+{
+	if(row1[k]<10)
+	{
+		rowprint+='0';
+	}
+	rowprint+=row1[k]+ ' ';
+}
+rowprint+='<br>';
+
+for(k=0; k<row2.length; k++)
+{
+	if(row2[k]<10)
+	{
+		rowprint+='0';
+	}
+	rowprint+=row2[k]+ ' ';
+}
+rowprint+='<br>';
+
+for(k=0; k<row3.length; k++)
+{
+	if(row3[k]<10)
+	{
+		rowprint+='0';
+	}
+	rowprint+=row3[k]+ ' ';
+}
+rowprint+='<br>';
+
+for(k=0; k<row4.length; k++)
+{
+	if(row4[k]<10)
+	{
+		rowprint+='0';
+	}
+	rowprint+=row4[k]+ ' ';
+}
+rowprint+='<br>';
+
+
+
+$('#dataDisplay').html(rowprint);
+row1.unshift(Math.floor(Math.random() * 26) + 1);
+row1.pop();
+row2.push(Math.floor(Math.random() * 26) + 1);
+row2.shift();
+row3.unshift(Math.floor(Math.random() * 26) + 1);
+row3.pop();
+row4.push(Math.floor(Math.random() * 26) + 1);
+row4.shift();
+
+}, 1000);//end setinterval
+</script>
 </div>
 </body>
 </html>
