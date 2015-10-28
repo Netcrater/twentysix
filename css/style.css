@@ -1,0 +1,11 @@
+#dataDisplay {
+    font: 15px courier, monospace;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+.red {
+	color: red;
+	border: solid white 1px;
+	border-radius: 5px;
+}
