@@ -62,22 +62,24 @@ for (m=0; m<8; m++)
 
 
 $('#dataDisplay').html(rowprint);
-row1.unshift(Math.floor(Math.random() * 26) + 1);
-row1.pop();
-row2.push(Math.floor(Math.random() * 26) + 1);
-row2.shift();
-row3.unshift(Math.floor(Math.random() * 26) + 1);
-row3.pop();
-row4.push(Math.floor(Math.random() * 26) + 1);
-row4.shift();
-row5.unshift(Math.floor(Math.random() * 26) + 1);
-row5.pop();
-row6.push(Math.floor(Math.random() * 26) + 1);
-row6.shift();
-row7.unshift(Math.floor(Math.random() * 26) + 1);
-row7.pop();
-row8.push(Math.floor(Math.random() * 26) + 1);
-row8.shift();
+
+for(r=0; r<8; r++)
+{
+var avoidzerodiv=(r+1)%2;
+
+if(avoidzerodiv==0)
+{
+masterMatrix[r].push(Math.floor(Math.random() * 26) + 1);
+masterMatrix[r].shift();
+}	
+else
+{
+masterMatrix[r].unshift(Math.floor(Math.random() * 26) + 1);
+masterMatrix[r].pop();
+}
+}
+
+
 }, 500);//end setinterval
 </script>
 </div>
