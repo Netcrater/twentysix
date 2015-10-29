@@ -1,8 +1,9 @@
 #dataDisplay {
-    font: 15px courier, monospace;
+    font: 35px courier, monospace;
     color: white;
     background-color: black;
     display: inline-block;
+    padding: 8px;
 }
 .red {
 	color: red;
