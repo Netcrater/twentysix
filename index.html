@@ -26,7 +26,7 @@ var row8=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
 
 masterMatrix=[row1,row2,row3,row4,row5,row6,row7,row8];
 
-var onetotwentysix;
+
 
 //for(k=0; k<8; k++)
 //{
@@ -44,85 +44,21 @@ var onetotwentysix;
 var timerID=setInterval(function(){
 
 var rowprint='';
-for(k=0; k<row1.length; k++)
-{
-	if(row1[k]<10)
-	{
-		rowprint+='0';
-	}
-	rowprint+=row1[k]+ ' ';
-}
-rowprint+='<br>';
 
-for(k=0; k<row2.length; k++)
-{
-	if(row2[k]<10)
-	{
-		rowprint+='0';
-	}
-	rowprint+=row2[k]+ ' ';
-}
-rowprint+='<br>';
 
-for(k=0; k<row3.length; k++)
-{
-	if(row3[k]<10)
-	{
-		rowprint+='0';
-	}
-	rowprint+=row3[k]+ ' ';
-}
-rowprint+='<br>';
 
-for(k=0; k<row4.length; k++)
+for (m=0; m<8; m++)
 {
-	if(row4[k]<10)
+	for(k=0; k<masterMatrix[m].length; k++)
 	{
-		rowprint+='0';
+		if(masterMatrix[m][k]<10)
+		{
+			rowprint+='0';
+		}
+		rowprint+=masterMatrix[m][k]+ ' ';
 	}
-	rowprint+=row4[k]+ ' ';
+	rowprint+='<br>';
 }
-rowprint+='<br>';
-
-for(k=0; k<row5.length; k++)
-{
-	if(row5[k]<10)
-	{
-		rowprint+='0';
-	}
-	rowprint+=row5[k]+ ' ';
-}
-rowprint+='<br>';
-
-for(k=0; k<row6.length; k++)
-{
-	if(row6[k]<10)
-	{
-		rowprint+='0';
-	}
-	rowprint+=row6[k]+ ' ';
-}
-rowprint+='<br>';
-
-for(k=0; k<row7.length; k++)
-{
-	if(row7[k]<10)
-	{
-		rowprint+='0';
-	}
-	rowprint+=row7[k]+ ' ';
-}
-rowprint+='<br>';
-
-for(k=0; k<row8.length; k++)
-{
-	if(row8[k]<10)
-	{
-		rowprint+='0';
-	}
-	rowprint+=row8[k]+ ' ';
-}
-rowprint+='<br>';
 
 
 $('#dataDisplay').html(rowprint);
